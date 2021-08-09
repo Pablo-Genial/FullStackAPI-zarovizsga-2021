@@ -6,13 +6,12 @@ import { CustomerService } from 'src/app/service/customer.service';
 @Component({
   selector: 'app-customer',
   templateUrl: './customer.component.html',
-  styleUrls: ['./customer.component.scss']
+  styleUrls: ['./customer.component.scss'],
 })
 export class CustomerComponent implements OnInit {
+  list$: Observable<Customer[]> = this.customerService.getAll();
 
-  constructor() { }
+  constructor(private customerService: CustomerService) {}
 
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }

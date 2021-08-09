@@ -38,7 +38,6 @@ app.use(bodyParser.json())
 app.use('/cars', require('./controllers/car/routes'))
 app.use('/customers', require('./controllers/customer/routes'))
 app.use('/races', require('./controllers/race/routes'))
-// app.use('/services', (req, res) => res.json([]));
 app.use('/services', require('./controllers/service/routes'))
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument))
 
